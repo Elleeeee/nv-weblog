@@ -13,7 +13,7 @@ app.use(cors())
 require('./userPassport')
 require('./routes')(app)
 
-let port = process.env.PORT || config.port
+let port = 8081
 sequelize.sync({force: false}).then(() => {
     app.listen(port, function () {
         console.log('Server running on ' + port)
